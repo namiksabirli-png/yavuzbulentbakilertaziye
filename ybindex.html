@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>YAVUZ BÜLENT BAKİLER VEFAT ETTİ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      text-align: center;
+      color: darkred;
+    }
+    .image-center {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .image-center img {
+      max-width: 25%; /* %25 genişlik */
+      height: auto;
+    }
+    .audio-controls {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background: darkred;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #a00000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Müzik Aç/Kapat butonu -->
+  <div class="audio-controls">
+    <button class="btn" onclick="toggleMusic()">Şaşırdım Kaldım Şiirini Hikayesi Dinle</button>
+    <audio id="bgMusic" loop>
+      <source src="sasırdımkaldımhikayesi.mp3" type="audio/mpeg">
+      Tarayıcınız ses etiketini desteklemiyor.
+    </audio>
+  </div>
+
+  <h1>YAVUZ BÜLENT BAKİLER VEFAT ETTİ<br>(ALLAH RAHMET EYLESİN)</h1>
+  <h2>ÜSTATLA İLGİLİ KÜÇÜK BİR ANI</h2>
+
+  <div class="image-center">
+    <img src="y_b_bakiler.png.jpg" alt="Yavuz Bülent Bakiler 3">
+  </div>
+
+  <p>“Arif Nihat Asya'nın Sevgi Mektupları Adlı Eseri Üzerine Bir Söz Dizimi (Kelime Grupları) İncelemesi” adlı Yüksek Lisans tezim için Arif Nihat Asya’nın eşine yazdığı mektupları bir araya getiren “Sevgi Mektupları” kitabını bulmam gerekiyordu.</p>
+
+  <p>Kitap son baskısından sonra uzun süre basılmadığı için piyasada yoktu. Kitabı basan ve yayına hazırlayan da Üstat Yavuz Bülent Bakiler idi.</p>
+
+  <p>25.03.2009’da Üstat’a ulaşıp durumu ifade ettiğimde kendi elinde olduğunu bana verebileceğini söyledi ve İçerenköy’deki evine eşimle birlikte gittik.</p>
+
+  <p>Bizi üzerinde kapıda şık bir ropdöşambırla ve güler yüzle karşılayan üstat, bizi içeri davet etmek istediğini ama içerisinin çok müsait olmadığını özür dileyerek ifade etti. Estağfurullah efendim dedik, biz sizi rahatsız ettik, kusura bakmayın dedik.</p>
+
+  <p>Kitabı hazır etmişti. Kitabın üzerinde 6 sıfır atılmadan basıldığı için “5.000.000” TL yazıyordu.</p>
+
+  <div class="image-center">
+    <img src="yavuzbulent_1.png.jpg" alt="Yavuz Bülent Bakiler 1">
+  </div>
+
+  <p>Üstat, kitabı uzatıp kitabın arka kapağındaki fiyatı göstererek esprili bir şekilde bu kitabın fiyatını zor ödersiniz ama… dedi.</p>
+
+  <p>Hiçbir karşılık almadan küçük bir lokum paketi hediyemizi zorla kabul ederek bize kitabı teslim etti.</p>
+
+  <p>Arif Nihat Asya ile kendi aralarında talebe-hoca ilişkisinden çok, baba-oğul ilişkisi olduğunu söyledi, bu ve bunun gibi birkaç konudan ayaküstü konuştuk üstatla.</p>
+
+  <p>Tarihi nasıl hatırladığımı düşünebilirsiniz. Şu anekdottan hatırlıyorum ne yazık ki:</p>
+
+  <p>O sırada evdeki televizyondan Muhsin Yazıcıoğlu’nun vefat haberi geçiyordu. 
+  Üstat bir anda yıkıldı, yüz çehresi değişti, ümitliydik ama olmadı dedi, Allah rahmet eylesin, dedi. Yazıcıoğlu’nu kastederek çok üzgün olduğunu, Yazıcıoğlu’nu çok yakından tanıdığını ve oğlu gibi çok sevdiğini ve ne kadar değerli bir siyasetçi ve devlet adamı olduğu kısa bir sohbette anlattı ve kitabı alarak oradan ayrıldık.</p>
+
+  <p>Bu vesileyle bu iki büyük Türkiye sevdalısı büyüğümüzü rahmetle anıyorum, Allah ikisinden de razı olsun, her ikisini de cennet-i âlâsıyla mükafatlandırsın.</p>
+
+  <div class="image-center">
+    <img src="yavuzbulent_2.png.jpg" alt="Yavuz Bülent Bakiler 2">
+  </div>
+
+  <p style="text-align:right;">Namık Sabırlı</p>
+
+  <script>
+    const audio = document.getElementById("bgMusic");
+    const btn = document.querySelector(".btn");
+
+    function toggleMusic() {
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = "Şaşırdım Kaldım Şiirini Hikayesi Kapat";
+      } else {
+        audio.pause();
+        btn.textContent = "Şaşırdım Kaldım Şiirini Hikayesi Dinle";
+      }
+    }
+  </script>
+</body>
+</html>
