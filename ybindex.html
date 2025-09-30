@@ -46,16 +46,14 @@
 <body>
 
   <!-- Müzik Aç/Kapat butonu -->
-  <div class="audio-controls">
-    <button class="btn" onclick="toggleMusic()">Şaşırdım Kaldım Şiirini Hikayesi Dinle</button>
-    <audio id="bgMusic" loop>
-      <source src="sasırdımkaldımhikayesi.mp3" type="audio/mpeg">
-      Tarayıcınız ses etiketini desteklemiyor.
-    </audio>
-  </div>
+  <!-- Müziği kontrol eden buton -->
+  <button id="playBtn">🔊 "Şaşırdım Kaldım" Şiirinin Hikayesi Dinle </button>
 
-  <h1>YAVUZ BÜLENT BAKİLER VEFAT ETTİ<br>(ALLAH RAHMET EYLESİN)</h1>
-  <h2>ÜSTATLA İLGİLİ KÜÇÜK BİR ANI</h2>
+  <!-- mp3 müzik dosyası -->
+  <audio id="bgm" src="sasırdım_kaldım_hikayesi.mp3"></audio>
+
+  <div class="container">
+    <h1>“YAVUZ BÜLENT BAKİLER VEFAT ETTİ<br>(ALLAH RAHMET EYLESİN)</h1>
 
   <div class="image-center">
     <img src="y_b_bakiler.png.jpg" alt="Yavuz Bülent Bakiler 3">
@@ -101,12 +99,13 @@
     function toggleMusic() {
       if (audio.paused) {
         audio.play();
-        btn.textContent = "Şaşırdım Kaldım Şiirini Hikayesi Kapat";
+        btn.textContent = ""Şaşırdım Kaldım" Şiirini Hikayesi Kapat";
       } else {
         audio.pause();
-        btn.textContent = "Şaşırdım Kaldım Şiirini Hikayesi Dinle";
+        btn.textContent = ""Şaşırdım Kaldım" Şiirini Hikayesi Dinle";
       }
     }
   </script>
 </body>
 </html>
+
