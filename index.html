@@ -22,7 +22,7 @@
       margin: 20px 0;
     }
     .image-center img {
-      max-width: 25%; /* %25 genişlik */
+      max-width: 25%;
       height: auto;
     }
     .audio-controls {
@@ -45,19 +45,19 @@
 </head>
 <body>
 
-  <!-- Müzik Aç/Kapat butonu -->
-  <!-- Müziği kontrol eden buton -->
-  <button id="playBtn">🔊 "Şaşırdım Kaldım" Şiirinin Hikayesi Dinle </button>
+  <div class="audio-controls">
+    <button id="playBtn" class="btn">🔊 "Şaşırdım Kaldım" Şiirinin Hikayesi Dinle</button>
+  </div>
 
-  <!-- mp3 müzik dosyası -->
-  <audio id="bgm" src="sasirdim_kaldim_hikayesi.mp3"></audio>
+  <!-- mp3 dosya adı: ascii-uyumlu örnek -->
+  <audio id="bgm" src="sasirdim_kaldim_hikayesi.mp3" preload="none"></audio>
 
   <div class="container">
     <h1>“YAVUZ BÜLENT BAKİLER VEFAT ETTİ<br>(ALLAH RAHMET EYLESİN)</h1>
 
-  <div class="image-center">
-    <img src="y_b_bakiler.png.jpg" alt="Yavuz Bülent Bakiler 3">
-  </div>
+    <div class="image-center">
+      <img src="y_b_bakiler.png.jpg" alt="Yavuz Bülent Bakiler 3">
+    </div>
 
   <p>“Arif Nihat Asya'nın Sevgi Mektupları Adlı Eseri Üzerine Bir Söz Dizimi (Kelime Grupları) İncelemesi” adlı Yüksek Lisans tezim için Arif Nihat Asya’nın eşine yazdığı mektupları bir araya getiren “Sevgi Mektupları” kitabını bulmam gerekiyordu.</p>
 
@@ -90,21 +90,24 @@
     <img src="yavuzbulent_2.png.jpg" alt="Yavuz Bülent Bakiler 2">
   </div>
 
-  <p style="text-align:right;">Namık Sabırlı</p>
+ <p style="text-align:right;">Namık Sabırlı</p>
+  </div>
 
   <script>
-    const audio = document.getElementById("bgMusic");
-    const btn = document.querySelector(".btn");
+    const audio = document.getElementById('bgm');
+    const btn = document.getElementById('playBtn');
 
-    function toggleMusic() {
+    btn.addEventListener('click', function () {
       if (audio.paused) {
-        audio.play();
-        btn.textContent = ""Şaşırdım Kaldım" Şiirini Hikayesi Kapat";
+        audio.play().catch(err => {
+          console.error('Playback failed:', err);
+        });
+        btn.textContent = '🔇 "Şaşırdım Kaldım" Şiirinin Hikayesi Kapat';
       } else {
         audio.pause();
-        btn.textContent = ""Şaşırdım Kaldım" Şiirini Hikayesi Dinle";
+        btn.textContent = '🔊 "Şaşırdım Kaldım" Şiirinin Hikayesi Dinle';
       }
-    }
+    });
   </script>
 </body>
 </html>
